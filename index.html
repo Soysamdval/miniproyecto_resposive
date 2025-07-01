@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="theme-color" content="#0d0d0d">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="favicon.ico">
+    <meta name="description"
+        content="Explora la Biblioteca Espiritual basada en la Senda de Fuego: una guía de vida, conocimiento y conexión con Dios.">
+
+    <title>La Senda de Fuego - Biblioteca Espiritual</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cardo:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --fuego: #e25822;
+            --noche: #0d0d0d;
+            --oro: #ffd700;
+            --piedra: #2e2e2e;
+            --luz: #f4f1ed;
+            --transparente: rgba(255, 255, 255, 0.05);
+            --radius: 12px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Cardo', serif;
+            background: var(--noche);
+            color: var(--luz);
+            line-height: 1.7;
+        }
+
+        header {
+            background: linear-gradient(90deg, var(--fuego), var(--oro));
+            padding: 2rem 1rem;
+            text-align: center;
+        }
+
+        header h1 {
+            color: #fff;
+            text-shadow: 2px 2px #000;
+            font-size: clamp(1.8rem, 5vw, 2.8rem);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 2rem 1rem;
+        }
+
+        .intro {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .intro p {
+            max-width: 700px;
+            margin: 1rem auto;
+            font-size: clamp(1rem, 2.5vw, 1.2rem);
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .gallery-one picture {
+            display: block;
+            overflow: hidden;
+            border-radius: 8px;
+            display: grid;
+            gap: 10px;
+            margin-top: 2rem;
+            display: grid;
+            grid-template-columns: repeat(minmax(180px, 1fr));
+        }
+
+        .gallery-img {
+            width: 100%;
+            height: auto;
+            display: block;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-img:hover {
+            transform: scale(1.03);
+        }
+
+
+        .card {
+            background: var(--piedra);
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: 0 0 12px rgba(255, 215, 0, 0.1);
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-6px);
+        }
+
+        .card img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .card-content {
+            padding: 1rem;
+        }
+
+        .card h2 {
+            color: var(--oro);
+            margin-bottom: 0.5rem;
+        }
+
+        .card p {
+            color: var(--luz);
+            font-size: 0.95rem;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem 1rem;
+            font-size: 0.9rem;
+            color: var(--luz);
+            border-top: 1px solid var(--fuego);
+            background: var(--piedra);
+        }
+
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: clamp(1rem, 2.5vw, 1.2rem);
+            }
+        }
+
+        .section,
+        .card {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 0.6s ease-out;
+        }
+
+        .section.visible,
+        .card.visible {
+            opacity: 1;
+            transform: none;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>🔥 La Senda de Fuego</h1>
+    </header>
+
+    <main class="container">
+        <section class="intro">
+            <p>Camina entre los planos, honra al Creador y despierta al Guerrero que habita en ti. Esta biblioteca reúne
+                los pilares de la Senda de Fuego y las enseñanzas que encienden el alma.</p>
+        </section>
+
+        <section class="gallery">
+            <article class="card">
+                <picture>
+                    <source type="image/webp" srcset="https://picsum.photos/id/1005/600/400.webp" />
+                    <img width="600" height="400" src="https://picsum.photos/id/1005/600/400.jpg"
+                        alt="Luz descendiendo sobre un monte" loading="lazy" />
+                </picture>
+                <div class="card-content">
+                    <h2>Fundamento Divino</h2>
+                    <p>Todo comienza con Él. Su fuego purifica, guía y llama a vivir en santidad y obediencia.</p>
+                </div>
+            </article>
+
+            <article class="card">
+                <picture>
+                    <source type="image/webp" srcset="https://picsum.photos/id/1011/600/400.webp" />
+                    <img width="600" height="400" src="https://picsum.photos/id/1011/600/400.jpg"
+                        alt="Luz descendiendo sobre un monte" loading="lazy" />
+                </picture>
+                <div class="card-content">
+                    <h2>Los Tres Planos</h2>
+                    <p>Chronos es prueba, Hypnos es batalla del alma, Kairos es el tiempo eterno donde habla Dios.
+                    </p>
+                </div>
+            </article>
+
+            <article class="card">
+                <picture>
+                    <source type="image/webp" srcset="https://picsum.photos/id/1035/600/400">
+                    <img width="600" height="400" src="https://picsum.photos/id/1035/600/400"
+                        alt="Guerrero en meditación para conectar con el Dios todo poderoso" loading="lazy" />
+                </picture>
+                <div class="card-content">
+                    <h2>Pilares del Guerrero</h2>
+                    <p>Amor, disciplina, conexión y pureza. Forjan el alma y sostienen la llama interior.</p>
+                </div>
+            </article>
+
+            <article class="card">
+                <picture>
+                    <source type="image/webp" srcset="https://picsum.photos/id/1041/600/400">
+                    <img width="600" height="400" src="https://picsum.photos/id/1041/600/400"
+                        alt="Espada encendida, símbolo de guerra espiritual y purificación" loading="lazy" />
+                </picture>
+                <div class="card-content">
+                    <h2>Disciplina de la Llama</h2>
+                    <p>Oración, entrenamiento, escritura, combate espiritual. El cuerpo se templa, el alma se
+                        fortalece.
+                    </p>
+                </div>
+            </article>
+
+            <article class="card">
+                <picture>
+                    <source type="image/webp" srcset="https://picsum.photos/id/1049/600/400">
+                    <img width="600" height="400" src="https://picsum.photos/id/1049/600/400"
+                        alt="Archivo sagrado con sabiduría ancestral suspendido entre planos" loading="lazy" />
+                </picture>
+                <div class="card-content">
+                    <h2>Conocimiento y Verdad</h2>
+                    <p>Se estudian las Escrituras, los libros ocultos, las señales del Espíritu. La verdad libera.
+                    </p>
+                </div>
+
+            </article>
+
+            <article class="card">
+                <picture>
+                    <source type="image/webp" srcset="https://picsum.photos/id/1062/600/400">
+                    <img width="600" height="400" src="https://picsum.photos/id/1062/600/400"
+                        alt="Sendero entre fuego y estrellas, porque es dificil y doloroso el caminar sobre él, más el guerrero se mantendrá firme hasta el final"
+                        loading="lazy" />
+                </picture>
+                    <div class="card-content">
+                        <h2>El Llamado</h2>
+                        <p>La Senda no es para todos. Solo para los que escuchan la voz del fuego y responden con todo
+                            su ser.</p>
+                </div>
+            </article>
+        </section>
+
+        <section class="section">
+            <h2>📚 Galería de Libros Inspiradores</h2>
+            <div class="gallery-one">
+                <!-- Imagen 1 -->
+                <picture>
+                    <source type="image/webp" srcset="
+                    https://picsum.photos/seed/fuego1/400/300.webp 400w,
+                    https://picsum.photos/seed/fuego1/600/400.webp 600w,
+                    https://picsum.photos/seed/fuego1/800/600.webp 800w" sizes="(max-width: 768px) 90vw, 45vw">
+                    <img width="600" height="400" src="https://picsum.photos/seed/fuego1/600/400.jpg" srcset="
+                    https://picsum.photos/seed/fuego1/400/300.jpg 400w,
+                    https://picsum.photos/seed/fuego1/600/400.jpg 600w,
+                    https://picsum.photos/seed/fuego1/800/600.jpg 800w" sizes="(max-width: 768px) 90vw, 45vw"
+                        alt="Libro sagrado sobre altar de fuego sutil" loading="lazy" class="gallery-img">
+                </picture>
+                <!-- Imagen 2 -->
+                <picture>
+                    <source type="image/webp" srcset="
+                    https://picsum.photos/seed/kairos2/400/300.webp 400w,
+                    https://picsum.photos/seed/kairos2/600/400.webp 600w,
+                    https://picsum.photos/seed/kairos2/800/600.webp 800w" sizes="(max-width: 768px) 90vw, 45vw">
+                    <img width="600" height="400" src="https://picsum.photos/seed/kairos2/600/400.jpg" srcset="
+                    https://picsum.photos/seed/kairos2/400/300.jpg 400w,
+                    https://picsum.photos/seed/kairos2/600/400.jpg 600w,
+                    https://picsum.photos/seed/kairos2/800/600.jpg 800w" sizes="(max-width: 768px) 90vw, 45vw"
+                        alt="Manuscrito antiguo bajo luz celestial" loading="lazy" class="gallery-img">
+                </picture>
+                <!-- Imagen 3 -->
+                <picture>
+                    <source type="image/webp" srcset="
+                    https://picsum.photos/seed/espiritu3/400/300.webp 400w,
+                    https://picsum.photos/seed/espiritu3/600/400.webp 600w,
+                    https://picsum.photos/seed/espiritu3/800/600.webp 800w" sizes="(max-width: 768px) 90vw, 45vw">
+                    <img width="600" height="400" src="https://picsum.photos/seed/espiritu3/600/400.jpg" srcset="
+                    https://picsum.photos/seed/espiritu3/400/300.jpg 400w,
+                    https://picsum.photos/seed/espiritu3/600/400.jpg 600w,
+                    https://picsum.photos/seed/espiritu3/800/600.jpg 800w" sizes="(max-width: 768px) 90vw, 45vw"
+                        alt="Guerrero espiritual leyendo en la montaña" loading="lazy" class="gallery-img">
+                </picture>
+                <!-- Imagen 4 -->
+                <picture>
+                    <source type="image/webp" srcset="
+                    https://picsum.photos/seed/sombra4/400/300.webp 400w,
+                    https://picsum.photos/seed/sombra4/600/400.webp 600w,
+                    https://picsum.photos/seed/sombra4/800/600.webp 800w" sizes="(max-width: 768px) 90vw, 45vw">
+                    <img width="600" height="400" src="https://picsum.photos/seed/sombra4/600/400.jpg" srcset="
+                    https://picsum.photos/seed/sombra4/400/300.jpg 400w,
+                    https://picsum.photos/seed/sombra4/600/400.jpg 600w,
+                    https://picsum.photos/seed/sombra4/800/600.jpg 800w" sizes="(max-width: 768px) 90vw, 45vw"
+                        alt="Biblioteca mística entre dimensiones" loading="lazy" class="gallery-img">
+                </picture>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        &copy; 2025 Biblioteca Espiritual Senda de Fuego | Hecho con fe y propósito
+    </footer>
+
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.section, .card').forEach(el => observer.observe(el));
+    </script>
+
+</body>
+
+</html>
